@@ -19,7 +19,7 @@ func main() {
 	})
 
 	http.HandleFunc("/version", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "v1.0")
+		fmt.Fprintf(w, "v1.2")
 	})
 
 	http.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {

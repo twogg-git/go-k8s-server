@@ -3,8 +3,8 @@ Playing with k8s and golang
 
 ## Cluster Creation
 ```sh
-kind create cluster --config .kube/kind.yaml
-kubectl apply -k .kube/control/
+kind create cluster --config k8s/kind.yaml
+kubectl apply -k k8s/control/
 kubectl config set-context --current --namespace=dev
 ```
 
@@ -18,6 +18,6 @@ sudo vim /etc/hosts
 
 ## App Deployment
 ```sh
-kubectl apply -k .kube/worker/
+kubectl apply -k k8s/worker/
 curl localhost/ping -H "Host: k8s.demo.local"
 ```
